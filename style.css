@@ -15,7 +15,7 @@ body {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", Roboto, sans-serif;
-  /* Single consistent background, no bands */
+  /* Single global background only */
   background: radial-gradient(circle at top, #020617 0, #020617 55%, #000 100%);
   color: #e5e7eb;
   line-height: 1.6;
@@ -39,7 +39,7 @@ main {
   padding: 3.2rem 0;
 }
 
-/* Remove alternating section background bars */
+/* No extra section backgrounds */
 .section-light {
   background: none;
 }
@@ -158,13 +158,14 @@ main {
   justify-content: center;
 }
 
+/* Keep the “card” look but use solid dark panel instead of another gradient */
 .hero-image-frame {
   max-width: 430px;
   width: 100%;
   aspect-ratio: 3 / 4;
   border-radius: 1.6rem;
   padding: 0.9rem;
-  background: radial-gradient(circle at top, #020617 0, #020617 55%, #030712 100%);
+  background: rgba(15, 23, 42, 0.95);
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 26px 80px rgba(15, 23, 42, 0.9);
   display: flex;
@@ -220,13 +221,14 @@ main {
   align-items: center;
 }
 
+/* Larger snapshot image, but solid dark background */
 .snapshot-image-frame {
   width: 100%;
-  max-width: 520px; /* bigger snapshot image */
+  max-width: 520px;
   aspect-ratio: 4 / 5;
   padding: 0.9rem;
   border-radius: 1.6rem;
-  background: radial-gradient(circle at top, #020617 0, #020617 55%, #030712 100%);
+  background: rgba(15, 23, 42, 0.95);
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
   display: flex;
@@ -248,11 +250,12 @@ main {
   margin-top: 1.4rem;
 }
 
+/* Solid stat cards to avoid extra big gradients */
 .stat-card {
   padding: 1rem 1.1rem;
   border-radius: 1rem;
   border: 1px solid rgba(148, 163, 184, 0.3);
-  background: radial-gradient(circle at top left, #020617 0, #020617 65%);
+  background: rgba(15, 23, 42, 0.9);
 }
 
 .stat-label {
@@ -339,13 +342,14 @@ main {
   align-items: center;
 }
 
+/* Solid dark actuator frame */
 .actuator-image-frame {
   width: 100%;
   max-width: 380px;
   aspect-ratio: 1 / 1;
   padding: 0.9rem;
   border-radius: 1.6rem;
-  background: radial-gradient(circle at top, #020617 0, #020617 55%, #030712 100%);
+  background: rgba(15, 23, 42, 0.95);
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
   display: flex;
@@ -366,7 +370,6 @@ main {
 /* Video grid */
 .video-grid {
   display: grid;
-  /* Slightly larger minimum width so cards grow more on desktop */
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-top: 1.6rem;
@@ -378,6 +381,7 @@ main {
   gap: 0.6rem;
 }
 
+/* Solid video frame background, bigger radius */
 .video-frame {
   position: relative;
   width: 100%;
@@ -386,7 +390,7 @@ main {
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
-  background: #020617;
+  background: rgba(15, 23, 42, 0.95);
 }
 
 .video-frame iframe {
