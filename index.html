@@ -79,30 +79,44 @@
           <p class="section-label">ROBOT SNAPSHOT</p>
           <h2>GBLN-01 at a glance</h2>
 
-          <div class="stats-grid">
-            <div class="stat-card">
-              <span class="stat-label">Height</span>
-              <span class="stat-value">~1.4 m</span>
+          <div class="robot-snapshot-layout">
+            <!-- Image box for CAD rendering -->
+            <div class="snapshot-image-card">
+              <div class="snapshot-image-frame">
+                <!-- Replace src with your CAD render -->
+                <img
+                  src="images/gbln-01-snapshot.png"
+                  alt="GBLN-01 CAD rendering"
+                />
+              </div>
             </div>
-            <div class="stat-card">
-              <span class="stat-label">Mass</span>
-              <span class="stat-value">≈ 30 kg</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Degrees of Freedom</span>
-              <span class="stat-value">20 DOF</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Structure</span>
-              <span class="stat-value">~90% 3D-printed polymer</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Actuators</span>
-              <span class="stat-value">Custom QDD, ~125 Nm joints</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-label">Target BOM</span>
-              <span class="stat-value">&lt; $10,000 (hardware)</span>
+
+            <!-- Existing stats -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-label">Height</span>
+                <span class="stat-value">~1.4 m</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Mass</span>
+                <span class="stat-value">≈ 30 kg</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Degrees of Freedom</span>
+                <span class="stat-value">20 DOF</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Structure</span>
+                <span class="stat-value">~90% 3D-printed polymer</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Actuators</span>
+                <span class="stat-value">Custom QDD, ~125 Nm joints</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Target BOM</span>
+                <span class="stat-value">&lt; $10,000 (hardware)</span>
+              </div>
             </div>
           </div>
         </div>
@@ -193,6 +207,90 @@
             weird gaits, and occasional moments of “wait, that actually
             works.”
           </p>
+        </div>
+      </section>
+
+      <!-- ACTUATORS: GBLN120_V3 -->
+      <section class="section section-light">
+        <div class="content">
+          <p class="section-label">ACTUATORS</p>
+          <h2>GBLN120_V3</h2>
+
+          <div class="actuator-block">
+            <!-- Hero image for actuator -->
+            <div class="actuator-image-frame">
+              <!-- Replace src with your actuator render/photo -->
+              <img
+                src="images/gbln120_v3.png"
+                alt="GBLN120_V3 humanoid actuator render"
+              />
+            </div>
+
+            <!-- Short description + spec box -->
+            <p class="section-body">
+              Dual-stage planetary QDD joint for high-torque humanoid hips, knees, and ankles.
+            </p>
+
+            <div class="stats-grid actuator-specs">
+              <div class="stat-card">
+                <span class="stat-label">Torque</span>
+                <span class="stat-value">300 Nm</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Mass</span>
+                <span class="stat-value">2.7 kg</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Envelope</span>
+                <span class="stat-value">129 × 75 mm</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Architecture</span>
+                <span class="stat-value">Dual-stage planetary QDD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RL LOCOMOTION VIDEOS -->
+      <section class="section">
+        <div class="content">
+          <p class="section-label">RL LOCOMOTION</p>
+          <h2>Learning to walk</h2>
+          <p class="section-body">
+            Controllers are trained in simulation, then pushed onto hardware to see what survives contact with reality.
+          </p>
+
+          <div class="video-grid">
+            <div class="video-card">
+              <div class="video-frame">
+                <!-- Replace VIDEO_ID_1 with your actual RL locomotion video -->
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_1"
+                  title="RL locomotion – subscale walker"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="video-caption">Subscale RL walker</p>
+            </div>
+
+            <div class="video-card">
+              <div class="video-frame">
+                <!-- Replace VIDEO_ID_2 with your actual RL locomotion video -->
+                <iframe
+                  src="https://www.youtube.com/embed/VIDEO_ID_2"
+                  title="RL locomotion – GBLN-01"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="video-caption">RL transfer to GBLN-01</p>
+            </div>
+          </div>
         </div>
       </section>
 
