@@ -12,11 +12,18 @@ body {
   height: 100%;
 }
 
+/* Hard override: no gradients, solid page background */
+body,
+main,
+.section,
+.hero {
+  background-color: #020617 !important;
+  background-image: none !important;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", Roboto, sans-serif;
-  /* Single solid background, no gradient */
-  background: #020617;
   color: #e5e7eb;
   line-height: 1.6;
 }
@@ -39,11 +46,11 @@ main {
   padding: 3.2rem 0;
 }
 
-/* No section-specific background colors */
 .section-light {
-  background: none;
+  /* Now identical to .section (kept only for HTML compatibility) */
 }
 
+/* Content wrapper */
 .content,
 .hero-inner {
   width: 100%;
@@ -57,11 +64,10 @@ main {
 }
 
 .hero-inner {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+  gap: 3rem;
   align-items: center;
-  gap: 2.5rem;
-  text-align: center;
 }
 
 .eyebrow {
@@ -83,8 +89,6 @@ main {
   color: #e5e7eb;
   max-width: 32rem;
   margin-bottom: 1.6rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .hero-tags {
@@ -92,7 +96,6 @@ main {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.8rem;
-  justify-content: center;
 }
 
 .hero-tags span {
@@ -102,14 +105,13 @@ main {
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.6);
-  background: rgba(15, 23, 42, 0.8);
+  background: #0b1220;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  justify-content: center;
 }
 
 /* Buttons */
@@ -153,7 +155,7 @@ main {
 
 .button.secondary:hover,
 .button.secondary:focus-visible {
-  background: rgba(15, 23, 42, 0.8);
+  background: #0b1220;
   outline: none;
 }
 
@@ -161,16 +163,15 @@ main {
 .hero-image {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .hero-image-frame {
   max-width: 430px;
   width: 100%;
-  aspect-ratio: 16 / 9; /* more horizontal */
+  aspect-ratio: 3 / 4;
   border-radius: 1.6rem;
   padding: 0.9rem;
-  background: rgba(15, 23, 42, 0.9);
+  background: #020617;
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 26px 80px rgba(15, 23, 42, 0.9);
   display: flex;
@@ -231,7 +232,7 @@ main {
   aspect-ratio: 4 / 5;
   padding: 0.9rem;
   border-radius: 1.6rem;
-  background: rgba(15, 23, 42, 0.9);
+  background: #020617;
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
   display: flex;
@@ -257,7 +258,7 @@ main {
   padding: 1rem 1.1rem;
   border-radius: 1rem;
   border: 1px solid rgba(148, 163, 184, 0.3);
-  background: rgba(15, 23, 42, 0.9);
+  background: #020617;
 }
 
 .stat-label {
@@ -330,34 +331,27 @@ main {
 }
 
 /* Actuator section */
-.actuator-section .section-label,
-.actuator-section h2 {
-  text-align: center;
-}
-
 .actuator-block {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  gap: 2.4rem;
   align-items: center;
-  gap: 1.6rem;
   margin-top: 1.8rem;
-  text-align: center;
 }
 
 .actuator-image-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
 
 .actuator-image-frame {
   width: 100%;
   max-width: 380px;
-  aspect-ratio: 16 / 9; /* more horizontal */
+  aspect-ratio: 1 / 1;
   padding: 0.9rem;
   border-radius: 1.6rem;
-  background: rgba(15, 23, 42, 0.9);
+  background: #020617;
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
   display: flex;
@@ -396,7 +390,7 @@ main {
   border-radius: 1.4rem;
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.3);
-  background: rgba(15, 23, 42, 0.9);
+  background: #020617;
   box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
 }
 
@@ -449,10 +443,20 @@ main {
   }
 
   .hero-inner {
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
   }
 
-  .robot-snapshot-layout {
+  .hero-image {
+    order: -1;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .robot-snapshot-layout,
+  .actuator-block {
     grid-template-columns: minmax(0, 1fr);
   }
 
