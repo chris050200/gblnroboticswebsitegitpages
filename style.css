@@ -312,7 +312,7 @@ main {
 
   .hero-inner {
     grid-template-columns: minmax(0, 1fr);
-    gap: 2.5rem;
+    gap: 2.5rem;   
   }
 
   .hero-image {
@@ -340,3 +340,4 @@ main {
     padding-bottom: 2.7rem;
   }
 }
+   
