@@ -57,10 +57,11 @@ main {
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 2.5rem;
+  text-align: center;
 }
 
 .eyebrow {
@@ -82,6 +83,8 @@ main {
   color: #e5e7eb;
   max-width: 32rem;
   margin-bottom: 1.6rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-tags {
@@ -89,6 +92,7 @@ main {
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1.8rem;
+  justify-content: center;
 }
 
 .hero-tags span {
@@ -105,6 +109,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  justify-content: center;
 }
 
 /* Buttons */
@@ -156,12 +161,13 @@ main {
 .hero-image {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .hero-image-frame {
   max-width: 430px;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 16 / 9; /* more horizontal */
   border-radius: 1.6rem;
   padding: 0.9rem;
   background: rgba(15, 23, 42, 0.9);
@@ -324,24 +330,31 @@ main {
 }
 
 /* Actuator section */
+.actuator-section .section-label,
+.actuator-section h2 {
+  text-align: center;
+}
+
 .actuator-block {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-  gap: 2.4rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 1.6rem;
   margin-top: 1.8rem;
+  text-align: center;
 }
 
 .actuator-image-card {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .actuator-image-frame {
   width: 100%;
   max-width: 380px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 9; /* more horizontal */
   padding: 0.9rem;
   border-radius: 1.6rem;
   background: rgba(15, 23, 42, 0.9);
@@ -436,20 +449,10 @@ main {
   }
 
   .hero-inner {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
-  .hero-image {
-    order: -1;
-  }
-
-  .hero {
-    padding-top: 3rem;
-  }
-
-  .robot-snapshot-layout,
-  .actuator-block {
+  .robot-snapshot-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 
