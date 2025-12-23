@@ -2,175 +2,222 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Goblin Robotics | GBLN-01</title>
+    <title>GBLN-01 Humanoid Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Goblin Robotics – GBLN-01 'Goblin' humanoid robot. General human capability with light-duty, coarse manipulation using affordable, mostly 3D-printed construction."
+      content="GBLN-01 is an experimental humanoid platform exploring affordable, high-performance actuation and reinforcement-learning locomotion."
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="site-header-inner">
-        <div class="logo">Goblin Robotics</div>
-        <nav class="main-nav" aria-label="Main">
-          <a href="#top" class="nav-link">Home</a>
-          <a href="#specs" class="nav-link">Specifications</a>
-          <a href="#operations" class="nav-link">Operations</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="top">
+    <main>
       <!-- HERO -->
       <section class="hero">
         <div class="hero-inner">
           <div class="hero-text">
-            <p class="hero-eyebrow">GBLN-01</p>
-            <h1 class="hero-title">“Goblin”</h1>
-            <p class="hero-subtitle">
-              General human capability – starting with light-duty, coarse
-              manipulation in a mostly 3D-printed, affordable humanoid platform.
+            <p class="eyebrow">EXPERIMENTAL HUMANOID PLATFORM</p>
+            <h1>GBLN-01 “Goblin”</h1>
+            <p class="hero-body">
+              A personal humanoid project exploring how far you can push
+              mostly 3D-printed structure, custom actuators, and modern control
+              into something that moves and feels like a small human.
             </p>
 
+            <div class="hero-tags">
+              <span>Custom BLDC actuators</span>
+              <span>RL locomotion</span>
+              <span>Low-cost manufacturing</span>
+            </div>
+
             <div class="hero-actions">
-              <!-- TODO: replace # with your real links -->
-              <a
-                class="btn primary"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
+              <!-- Replace # with real links when you have them -->
+              <a href="#" class="button primary" target="_blank" rel="noopener noreferrer">
+                Build logs / code
               </a>
-              <a
-                class="btn ghost"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                X (Twitter)
+              <a href="#" class="button secondary" target="_blank" rel="noopener noreferrer">
+                Follow progress
               </a>
             </div>
           </div>
 
-          <div class="hero-media">
-            <!-- Replace src with your actual hero image path or URL -->
+          <div class="hero-image">
+            <!-- Replace src with your actual render/photo -->
             <div class="hero-image-frame">
               <img
                 src="images/gbln-01-hero.png"
-                alt="Render of the GBLN-01 'Goblin' humanoid robot"
+                alt="GBLN-01 Goblin humanoid render"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SPECS -->
-      <section id="specs" class="specs-section">
-        <div class="content-narrow">
-          <h2>Specifications</h2>
+      <!-- STORY -->
+      <section class="section section-light">
+        <div class="content">
+          <p class="section-label">PROJECT STORY</p>
+          <h2>Robots that feel a little bit alive</h2>
+          <p class="section-body">
+            GBLN-01 is not a product. It’s a sandbox for ideas: actuation,
+            control, manufacturing, and the question of what a “general
+            human-capable” robot might actually look like when you build it
+            on a garage budget instead of a factory budget.
+          </p>
+          <p class="section-body">
+            The goal is simple: a bipedal platform that can move around real
+            human spaces, do light-duty, coarse manipulation, and be open
+            enough that other people can learn from its failures and steal
+            the good ideas.
+          </p>
+        </div>
+      </section>
 
-          <p class="specs-tagline">
-            General human capability – beginning with light-duty, coarse
-            manipulation.
+      <!-- ROBOT SNAPSHOT -->
+      <section class="section">
+        <div class="content">
+          <p class="section-label">ROBOT SNAPSHOT</p>
+          <h2>GBLN-01 at a glance</h2>
+
+          <div class="stats-grid">
+            <div class="stat-card">
+              <span class="stat-label">Height</span>
+              <span class="stat-value">~1.4 m</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Mass</span>
+              <span class="stat-value">≈ 30 kg</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Degrees of Freedom</span>
+              <span class="stat-value">20 DOF</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Structure</span>
+              <span class="stat-value">~90% 3D-printed polymer</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Actuators</span>
+              <span class="stat-value">Custom QDD, ~125 Nm joints</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Target BOM</span>
+              <span class="stat-value">&lt; $10,000 (hardware)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH HIGHLIGHTS -->
+      <section class="section section-light">
+        <div class="content">
+          <p class="section-label">TECH HIGHLIGHTS</p>
+          <h2>What’s interesting here</h2>
+
+          <div class="columns">
+            <div class="column">
+              <h3>Actuation</h3>
+              <p>
+                Compact, high-torque electric actuators built around
+                frameless BLDC motors and printed gear stages. Everything is
+                biased toward “good enough to walk and fall” rather than
+                perfect machining.
+              </p>
+            </div>
+            <div class="column">
+              <h3>Locomotion</h3>
+              <p>
+                Locomotion is driven by reinforcement learning controllers
+                tested on subscale hardware first, then scaled to GBLN-01.
+                Think: “teach a robot to walk, then see what else it can do.”
+              </p>
+            </div>
+            <div class="column">
+              <h3>Manufacturing</h3>
+              <p>
+                Most structural parts come off consumer-grade printers.
+                Metal is reserved for where stress actually demands it.
+                The experiment is: how far can you go without a factory?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATUS / ROADMAP -->
+      <section class="section">
+        <div class="content">
+          <p class="section-label">STATUS</p>
+          <h2>Where things are right now</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-content">
+                <h3>Actuator prototypes</h3>
+                <p>
+                  First-generation actuators have been prototyped and
+                  tested on a dedicated rig to validate torque, thermal
+                  behavior, and backlash.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-content">
+                <h3>Subscale RL walker</h3>
+                <p>
+                  Reinforcement-learning locomotion has been proven on a
+                  smaller test robot. GBLN-01 is the next platform for
+                  those controllers.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-content">
+                <h3>Full-body integration</h3>
+                <p>
+                  Current focus is integrating the new actuators into a
+                  full-body frame, wiring up the control stack, and
+                  capturing enough footage to tell the story properly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p class="section-body subtle">
+            This site will evolve as the robot does. Expect broken parts,
+            weird gaits, and occasional moments of “wait, that actually
+            works.”
+          </p>
+        </div>
+      </section>
+
+      <!-- FOOTER / CONTACT -->
+      <section class="section footer-section">
+        <div class="content">
+          <p class="section-label">CONTACT</p>
+          <h2>Follow the Goblin</h2>
+          <p class="section-body">
+            If you’re into humanoids, weird actuators, or just want to nerd
+            out about robots, feel free to reach out.
           </p>
 
-          <div class="specs-grid">
-            <div class="spec-card">
-              <span class="spec-label">Mass</span>
-              <span class="spec-value">30&nbsp;kg</span>
-            </div>
-
-            <div class="spec-card">
-              <span class="spec-label">Degrees of Freedom</span>
-              <span class="spec-value">20 DOF</span>
-            </div>
-
-            <div class="spec-card">
-              <span class="spec-label">Construction</span>
-              <span class="spec-value">
-                Polymer, ~90% 3D-printed, &lt;$10,000 BOM
-              </span>
-            </div>
-
-            <div class="spec-card">
-              <span class="spec-label">Actuation</span>
-              <span class="spec-value">Electric QDD, ~125&nbsp;Nm torque</span>
-            </div>
-
-            <div class="spec-card">
-              <span class="spec-label">Locomotion</span>
-              <span class="spec-value">
-                Reinforcement learning locomotion controller
-              </span>
-            </div>
-
-            <div class="spec-card">
-              <span class="spec-label">Manipulators</span>
-              <span class="spec-value">
-                Soft paddle “hand” manipulators<br />
-                <span class="spec-status">In development</span>
-              </span>
-            </div>
+          <div class="footer-links">
+            <!-- Swap in real links/email -->
+            <a href="mailto:chrisv555200@gmail.com" class="footer-link">
+              Email
+            </a>
+            <a href="#" class="footer-link">GitHub</a>
+            <a href="#" class="footer-link">X (Twitter)</a>
           </div>
 
-          <!-- Optional secondary render image -->
-          <div class="image-strip">
-            <figure class="image-strip-item">
-              <!-- Replace src with your image URL -->
-              <img
-                src="images/gbln-01-side.png"
-                alt="Side render of GBLN-01 humanoid robot"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- OPERATIONS / DIVISION -->
-      <section id="operations" class="operations-section">
-        <div class="content-narrow">
-          <h3 class="ops-title">GOBLIN OPERATIONS</h3>
-          <p class="ops-subtitle">CONSCIOUS SYSTEMS DIVISION</p>
-
-          <div class="ops-grid">
-            <!-- Replace each src with your own image paths or URLs -->
-            <figure class="ops-item">
-              <img
-                src="images/ops-1.png"
-                alt="Goblin Operations illustration or logo"
-              />
-            </figure>
-
-            <figure class="ops-item">
-              <img
-                src="images/ops-2.png"
-                alt="Robot development image"
-              />
-            </figure>
-
-            <figure class="ops-item">
-              <img
-                src="images/ops-3.png"
-                alt="Concept art or operations photo"
-              />
-            </figure>
-
-            <figure class="ops-item">
-              <img
-                src="images/ops-4.png"
-                alt="Laboratory or field test photo"
-              />
-            </figure>
-          </div>
+          <p class="footer-meta">© 2024 Chris Vallone – GBLN robotics</p>
         </div>
       </section>
     </main>
-
-    <footer class="site-footer">
-      <p>© 2024 Chris Vallone</p>
-    </footer>
   </body>
 </html>
