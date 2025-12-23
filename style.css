@@ -332,14 +332,15 @@ main {
 
 /* Actuator section */
 .actuator-block {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
-  gap: 2.4rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
   margin-top: 1.8rem;
 }
 
 .actuator-image-card {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,7 +367,32 @@ main {
 }
 
 .actuator-copy {
+  width: 100%;
   max-width: 460px;
+}
+
+/* Make actuator specs look like a clean spec sheet */
+.actuator-specs {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr); /* single column */
+  gap: 0.6rem;
+  max-width: 420px;
+}
+
+.actuator-specs .stat-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.75rem 1rem;
+}
+
+.actuator-specs .stat-label {
+  margin-bottom: 0;
+}
+
+.actuator-specs .stat-value {
+  font-weight: 600;
 }
 
 /* Video grid */
@@ -455,8 +481,7 @@ main {
     padding-top: 3rem;
   }
 
-  .robot-snapshot-layout,
-  .actuator-block {
+  .robot-snapshot-layout {
     grid-template-columns: minmax(0, 1fr);
   }
 
