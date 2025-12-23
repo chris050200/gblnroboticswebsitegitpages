@@ -218,7 +218,7 @@ main {
 }
 
 .snapshot-image-frame {
-  width: 100%;
+  width: 50%;
   max-width: 420px;
   aspect-ratio: 3 / 4;
   padding: 0.9rem;
