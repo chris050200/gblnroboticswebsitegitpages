@@ -15,8 +15,8 @@ body {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", Roboto, sans-serif;
-  /* Single, flat background */
-  background: #020617;
+  /* Single, global gradient */
+  background: radial-gradient(circle at top, #020617 0, #020617 55%, #000 100%);
   color: #e5e7eb;
   line-height: 1.6;
 }
@@ -39,7 +39,7 @@ main {
   padding: 3.2rem 0;
 }
 
-/* No special background on sections at all */
+/* No section-specific background colors */
 .section-light {
   background: none;
 }
@@ -98,7 +98,7 @@ main {
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
   border: 1px solid rgba(148, 163, 184, 0.6);
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 23, 42, 0.8);
 }
 
 .hero-actions {
@@ -148,7 +148,7 @@ main {
 
 .button.secondary:hover,
 .button.secondary:focus-visible {
-  background: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 23, 42, 0.8);
   outline: none;
 }
 
@@ -164,9 +164,10 @@ main {
   aspect-ratio: 3 / 4;
   border-radius: 1.6rem;
   padding: 0.9rem;
-  background: #020617; /* same as page */
+  /* Solid-ish card over the global gradient */
+  background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 26px 80px rgba(15, 23, 42, 0.9);
   display: flex;
   align-items: stretch;
 }
@@ -221,13 +222,13 @@ main {
 
 .snapshot-image-frame {
   width: 100%;
-  max-width: 520px; /* bigger snapshot image */
+  max-width: 520px; /* bigger image */
   aspect-ratio: 4 / 5;
   padding: 0.9rem;
   border-radius: 1.6rem;
-  background: #020617; /* same as page */
+  background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
   display: flex;
   align-items: stretch;
 }
@@ -251,7 +252,7 @@ main {
   padding: 1rem 1.1rem;
   border-radius: 1rem;
   border: 1px solid rgba(148, 163, 184, 0.3);
-  background: #020617; /* same as body */
+  background: rgba(15, 23, 42, 0.9);
 }
 
 .stat-label {
@@ -344,9 +345,9 @@ main {
   aspect-ratio: 1 / 1;
   padding: 0.9rem;
   border-radius: 1.6rem;
-  background: #020617;
+  background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
   display: flex;
   align-items: stretch;
 }
@@ -383,8 +384,8 @@ main {
   border-radius: 1.4rem;
   overflow: hidden;
   border: 1px solid rgba(148, 163, 184, 0.3);
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.8);
-  background: #020617;
+  background: rgba(15, 23, 42, 0.9);
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.9);
 }
 
 .video-frame iframe {
