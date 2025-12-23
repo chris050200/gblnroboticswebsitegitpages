@@ -15,8 +15,8 @@ body {
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
     "Segoe UI", Roboto, sans-serif;
-  /* Single, global gradient */
-  background: radial-gradient(circle at top, #020617 0, #020617 55%, #000 100%);
+  /* Single solid background, no gradient */
+  background: #020617;
   color: #e5e7eb;
   line-height: 1.6;
 }
@@ -164,7 +164,6 @@ main {
   aspect-ratio: 3 / 4;
   border-radius: 1.6rem;
   padding: 0.9rem;
-  /* Solid-ish card over the global gradient */
   background: rgba(15, 23, 42, 0.9);
   border: 1px solid rgba(148, 163, 184, 0.3);
   box-shadow: 0 26px 80px rgba(15, 23, 42, 0.9);
@@ -222,7 +221,7 @@ main {
 
 .snapshot-image-frame {
   width: 100%;
-  max-width: 520px; /* bigger image */
+  max-width: 520px;
   aspect-ratio: 4 / 5;
   padding: 0.9rem;
   border-radius: 1.6rem;
