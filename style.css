@@ -334,9 +334,10 @@ main {
 .actuator-block {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;         /* CHANGED: center the whole stack */
   gap: 1.6rem;
   margin-top: 1.8rem;
+  text-align: center;          /* CHANGED: center heading/paragraph */
 }
 
 .actuator-image-card {
@@ -368,7 +369,8 @@ main {
 
 .actuator-copy {
   width: 100%;
-  max-width: 460px;
+  max-width: 380px;            /* CHANGED: match image width so it lines up */
+  margin: 0 auto;
 }
 
 /* Make actuator specs look like a clean spec sheet */
@@ -377,7 +379,6 @@ main {
   display: grid;
   grid-template-columns: minmax(0, 1fr); /* single column */
   gap: 0.6rem;
-  max-width: 420px;
 }
 
 .actuator-specs .stat-card {
@@ -432,7 +433,7 @@ main {
   color: #9ca3af;
 }
 
-/* Footer section */
+/* Footer / links */
 .footer-section {
   padding-bottom: 0;
 }
@@ -520,3 +521,4 @@ main {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
